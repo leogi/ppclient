@@ -1,23 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="PPViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etZ-75-mNA">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hg-e2-SKL">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsJ-XB-Ker">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="GgG-c1-jJL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="2" eventType="touchUpInside" id="xuz-Zq-G1X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CED-dG-00w">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CvA-hA-0Pv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="2" eventType="touchUpInside" id="pQB-cc-7QU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="etZ-75-mNA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6qz-wk-20s"/>
+                            <constraint firstItem="CED-dG-00w" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HfM-39-PdC"/>
+                            <constraint firstItem="8hg-e2-SKL" firstAttribute="top" secondItem="etZ-75-mNA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="K2R-nD-SFc"/>
+                            <constraint firstItem="CED-dG-00w" firstAttribute="top" secondItem="gsJ-XB-Ker" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Uqw-75-ukH"/>
+                            <constraint firstItem="gsJ-XB-Ker" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="VCC-IK-dee"/>
+                            <constraint firstItem="etZ-75-mNA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aeV-fC-EWr"/>
+                            <constraint firstAttribute="trailing" secondItem="CED-dG-00w" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="amS-vA-eW4"/>
+                            <constraint firstAttribute="trailing" secondItem="8hg-e2-SKL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="efB-V0-Cex"/>
+                            <constraint firstItem="8hg-e2-SKL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lYb-jM-GHu"/>
+                            <constraint firstAttribute="trailing" secondItem="gsJ-XB-Ker" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vxz-sH-xFk"/>
+                            <constraint firstItem="etZ-75-mNA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="12" id="x3b-hB-aVL"/>
+                            <constraint firstItem="gsJ-XB-Ker" firstAttribute="top" secondItem="3" secondAttribute="top" constant="98" id="xGf-f2-6Cv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="etZ-75-mNA" id="Bez-gc-8cY"/>
+                        <outlet property="emailTextfield" destination="etZ-75-mNA" id="VII-vt-Yci"/>
+                        <outlet property="password" destination="8hg-e2-SKL" id="11b-6U-ddH"/>
+                        <outlet property="passwordTextfield" destination="8hg-e2-SKL" id="gha-Nc-bGv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PPViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PPViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="button:"/>
+                <relationship kind="action" name="logout:"/>
+                <relationship kind="outlet" name="emailTextfield" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextfield" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

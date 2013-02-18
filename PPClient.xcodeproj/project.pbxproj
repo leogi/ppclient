@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86429F7416D205EA007BE20E /* PPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 86429F7316D205EA007BE20E /* PPApplication.m */; };
+		86429F7C16D22D5E007BE20E /* PPAppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 86429F7B16D22D5E007BE20E /* PPAppConstant.m */; };
 		865B795416CF1DF20001B650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865B795316CF1DF20001B650 /* UIKit.framework */; };
 		865B795616CF1DF20001B650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865B795516CF1DF20001B650 /* Foundation.framework */; };
 		865B795816CF1DF20001B650 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865B795716CF1DF20001B650 /* CoreGraphics.framework */; };
@@ -23,6 +25,8 @@
 		865B797A16CF1DF20001B650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865B795516CF1DF20001B650 /* Foundation.framework */; };
 		865B798216CF1DF20001B650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 865B798016CF1DF20001B650 /* InfoPlist.strings */; };
 		865B798516CF1DF20001B650 /* PPClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865B798416CF1DF20001B650 /* PPClientTests.m */; };
+		865B799F16CF1FB00001B650 /* PPHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 865B799E16CF1FB00001B650 /* PPHttpRequest.m */; };
+		865B79A516CF1FD20001B650 /* PPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 865B79A416CF1FD20001B650 /* PPLogin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86429F7216D205EA007BE20E /* PPApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPApplication.h; sourceTree = "<group>"; };
+		86429F7316D205EA007BE20E /* PPApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPApplication.m; sourceTree = "<group>"; };
+		86429F7816D20E5C007BE20E /* PPViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewDelegate.h; sourceTree = "<group>"; };
+		86429F7916D20EE5007BE20E /* PPRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRequestDelegate.h; sourceTree = "<group>"; };
+		86429F7A16D22D5E007BE20E /* PPAppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAppConstant.h; sourceTree = "<group>"; };
+		86429F7B16D22D5E007BE20E /* PPAppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAppConstant.m; sourceTree = "<group>"; };
 		865B795016CF1DF20001B650 /* PPClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865B795316CF1DF20001B650 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		865B795516CF1DF20001B650 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +68,10 @@
 		865B798116CF1DF20001B650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		865B798316CF1DF20001B650 /* PPClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPClientTests.h; sourceTree = "<group>"; };
 		865B798416CF1DF20001B650 /* PPClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPClientTests.m; sourceTree = "<group>"; };
+		865B799D16CF1FB00001B650 /* PPHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPHttpRequest.h; sourceTree = "<group>"; };
+		865B799E16CF1FB00001B650 /* PPHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPHttpRequest.m; sourceTree = "<group>"; };
+		865B79A316CF1FD20001B650 /* PPLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLogin.h; sourceTree = "<group>"; };
+		865B79A416CF1FD20001B650 /* PPLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLogin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +101,7 @@
 		865B794716CF1DF20001B650 = {
 			isa = PBXGroup;
 			children = (
+				865B798E16CF1E160001B650 /* PPConnection */,
 				865B795916CF1DF20001B650 /* PPClient */,
 				865B797D16CF1DF20001B650 /* PPClientTests */,
 				865B795216CF1DF20001B650 /* Frameworks */,
@@ -158,6 +173,39 @@
 				865B798016CF1DF20001B650 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		865B798E16CF1E160001B650 /* PPConnection */ = {
+			isa = PBXGroup;
+			children = (
+				865B799916CF1F520001B650 /* PPController */,
+				865B799816CF1F120001B650 /* PPHttpRequest */,
+			);
+			name = PPConnection;
+			sourceTree = "<group>";
+		};
+		865B799816CF1F120001B650 /* PPHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				865B799D16CF1FB00001B650 /* PPHttpRequest.h */,
+				865B799E16CF1FB00001B650 /* PPHttpRequest.m */,
+				86429F7916D20EE5007BE20E /* PPRequestDelegate.h */,
+			);
+			name = PPHttpRequest;
+			sourceTree = "<group>";
+		};
+		865B799916CF1F520001B650 /* PPController */ = {
+			isa = PBXGroup;
+			children = (
+				865B79A316CF1FD20001B650 /* PPLogin.h */,
+				865B79A416CF1FD20001B650 /* PPLogin.m */,
+				86429F7216D205EA007BE20E /* PPApplication.h */,
+				86429F7316D205EA007BE20E /* PPApplication.m */,
+				86429F7816D20E5C007BE20E /* PPViewDelegate.h */,
+				86429F7A16D22D5E007BE20E /* PPAppConstant.h */,
+				86429F7B16D22D5E007BE20E /* PPAppConstant.m */,
+			);
+			name = PPController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +322,10 @@
 				865B796016CF1DF20001B650 /* main.m in Sources */,
 				865B796416CF1DF20001B650 /* PPAppDelegate.m in Sources */,
 				865B797016CF1DF20001B650 /* PPViewController.m in Sources */,
+				865B799F16CF1FB00001B650 /* PPHttpRequest.m in Sources */,
+				865B79A516CF1FD20001B650 /* PPLogin.m in Sources */,
+				86429F7416D205EA007BE20E /* PPApplication.m in Sources */,
+				86429F7C16D22D5E007BE20E /* PPAppConstant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +506,7 @@
 				865B798A16CF1DF20001B650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		865B798B16CF1DF20001B650 /* Build configuration list for PBXNativeTarget "PPClientTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +515,7 @@
 				865B798D16CF1DF20001B650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
