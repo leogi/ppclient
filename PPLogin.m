@@ -19,13 +19,16 @@
     [data appendString:email];
     [data appendString:@"&session[password]="];
     [data appendString:password];
-    PPHttpRequest *request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint: LoginEndpoint forMethod:POST forRequestData:data];
+    
+    NSString* url = [NSString stringWithFormat:@"%@%@", Hostname, LoginEndpoint];
+    PPHttpRequest *request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint: url forMethod:POST forRequestData:data];
     [request connect]; // run
 }
 
 - (void)logout{
     NSMutableString* data = [[NSMutableString alloc] init];
-    PPHttpRequest *request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint: LogoutEndpoint forMethod:DELETE forRequestData:data];
+    NSString* url = [NSString stringWithFormat:@"%@%@", Hostname, LogoutEndpoint];
+    PPHttpRequest *request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint: url forMethod:DELETE forRequestData:data];
     [request connect]; // run
 }
 

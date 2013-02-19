@@ -19,18 +19,6 @@
 @synthesize email = _email;
 @synthesize password = _password;
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)button:(id)sender {
     _email = _emailTextfield.text;
     _password = _passwordTextfield.text;
@@ -44,6 +32,14 @@
     [pplogin logout];
 }
 
+- (IBAction)update:(id)sender {
+    PPUsers* users = [[PPUsers alloc] initWithDelegate:self forTypeCallback: PPUsersUpdateCallbackType];
+    NSURL* remoteUrl = [NSURL URLWithString:@"http://images.fanpop.com/images/image_uploads/tobi-aka--obito-naruto-shippuuden-452641_800_1132.jpg"];
+    [users setAvatarUrl:remoteUrl];
+    [users setUid:@"1"];
+    [users update];
+}
+
 - (void)ppLoginCallback:(NSMutableData *)data{
     NSLog(@"%@", @"pp login callback success");
 }
@@ -52,4 +48,7 @@
     NSLog(@"pp logout callback success");
 }
 
+- (void) ppUserUpdateCallback: (NSMutableData*) data{
+    NSLog(@"pp user update callback success");
+}
 @end

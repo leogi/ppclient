@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "PPLogin.h"
+#import "PPApplicationController.h"
+#import "PPUsers.h"
 
-@interface PPViewController : UIViewController <PPViewDelegate>
+@interface PPViewController : PPApplicationController//<PPViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *emailTextfield;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextfield;
 - (IBAction)button:(id)sender;
 - (IBAction)logout:(id)sender;
+- (IBAction)update:(id)sender;
 
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *password;

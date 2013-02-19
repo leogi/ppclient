@@ -11,5 +11,6 @@
 @protocol PPRequestDelegate <NSObject>
 
 - (void) requestCallback: (NSMutableData*) receivedData;
+- (void) errorCallback: (NSError*) error;
 
 @end

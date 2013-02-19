@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -52,18 +52,34 @@
                                     <action selector="logout:" destination="2" eventType="touchUpInside" id="pQB-cc-7QU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT7-b8-c4S">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="update">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="update:" destination="2" eventType="touchUpInside" id="XCX-wa-7he"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="etZ-75-mNA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6qz-wk-20s"/>
+                            <constraint firstItem="nT7-b8-c4S" firstAttribute="top" secondItem="CED-dG-00w" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GBA-X5-RNw"/>
                             <constraint firstItem="CED-dG-00w" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HfM-39-PdC"/>
                             <constraint firstItem="8hg-e2-SKL" firstAttribute="top" secondItem="etZ-75-mNA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="K2R-nD-SFc"/>
+                            <constraint firstItem="nT7-b8-c4S" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TJG-Ak-HKj"/>
                             <constraint firstItem="CED-dG-00w" firstAttribute="top" secondItem="gsJ-XB-Ker" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Uqw-75-ukH"/>
                             <constraint firstItem="gsJ-XB-Ker" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="VCC-IK-dee"/>
                             <constraint firstItem="etZ-75-mNA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aeV-fC-EWr"/>
                             <constraint firstAttribute="trailing" secondItem="CED-dG-00w" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="amS-vA-eW4"/>
                             <constraint firstAttribute="trailing" secondItem="8hg-e2-SKL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="efB-V0-Cex"/>
                             <constraint firstItem="8hg-e2-SKL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lYb-jM-GHu"/>
+                            <constraint firstAttribute="trailing" secondItem="nT7-b8-c4S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r8L-1h-Fk6"/>
                             <constraint firstAttribute="trailing" secondItem="gsJ-XB-Ker" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vxz-sH-xFk"/>
                             <constraint firstItem="etZ-75-mNA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="12" id="x3b-hB-aVL"/>
                             <constraint firstItem="gsJ-XB-Ker" firstAttribute="top" secondItem="3" secondAttribute="top" constant="98" id="xGf-f2-6Cv"/>
@@ -84,11 +100,15 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="PPViewController" superclassName="UIViewController">
+        <class className="PPApplicationController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PPApplicationController.h"/>
+        </class>
+        <class className="PPViewController" superclassName="PPApplicationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PPViewController.h"/>
             <relationships>
                 <relationship kind="action" name="button:"/>
                 <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="update:"/>
                 <relationship kind="outlet" name="emailTextfield" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordTextfield" candidateClass="UITextField"/>
             </relationships>

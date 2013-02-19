@@ -17,10 +17,15 @@
 @property NSArray* cookie;
 @property NSString* endpoint;
 @property NSString* requestMethod;
-@property NSMutableString* requestData;
+@property NSMutableString* requestStringData;
+@property NSMutableData* fileData;
 
 - (id) initWithDelegate: (id) dlg forEndPoint: (NSString*) url forMethod: (NSString*) method forRequestData: (NSMutableString*) data ;
+- (id) initWithDelegateForUpload: (id) dlg forEndPoint: (NSString*) url forMethod: (NSString*) method forRequestData: (NSMutableData*) data ;
+
 - (void) handleReceivedData: (NSMutableData*) data;
+- (void) handleConnectionError: (NSError*) error;
 - (void) connect;
+- (void) connectForUpload;
 
 @end

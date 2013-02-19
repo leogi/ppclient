@@ -14,7 +14,8 @@
 @synthesize cookie;
 @synthesize endpoint;
 @synthesize requestMethod;
-@synthesize requestData;
+@synthesize requestStringData;
+@synthesize fileData;
 
 - (id)initWithDelegate: (id) dlg{
     if ( self = [super init] ){
@@ -30,7 +31,21 @@
         [self setDelegate:dlg];
         [self setEndpoint:url];
         [self setRequestMethod:method];
-        [self setRequestData:data];
+        [self setRequestStringData:data];
+        [self setFileData:nil];
+        return self;
+    }else{
+        return nil;
+    }
+}
+
+- (id)initWithDelegateForUpload:(id)dlg forEndPoint:(NSString *)url forMethod:(NSString *)method forRequestData:(NSMutableData *)data{
+    if ( self = [super init]) {
+        [self setDelegate:dlg];
+        [self setEndpoint:url];
+        [self setRequestMethod:method];
+        [self setFileData:data];
+        [self setRequestStringData:nil];
         return self;
     }else{
         return nil;
@@ -48,8 +63,15 @@
     if (self.cookie != nil){
         [request setAllHTTPHeaderFields:[NSHTTPCookie requestHeaderFieldsWithCookies: self.cookie]];
     }
-    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-length"];
-    [request setHTTPBody: [requestData dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    if (requestStringData != nil) {
+        [request setValue:[NSString stringWithFormat:@"%d", [requestStringData length]] forHTTPHeaderField:@"Content-length"];
+        [request setHTTPBody: [requestStringData dataUsingEncoding:NSUTF8StringEncoding]];
+    }else{
+        [request setValue:[NSString stringWithFormat:@"%d", [fileData length]] forHTTPHeaderField:@"Content-length"];
+        [request setHTTPBody:fileData];
+    }
+   
     
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate: self];
     if (connection){
@@ -59,8 +81,34 @@
     }
 }
 
+- (void)connectForUpload{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString: endpoint]];
+    [request setHTTPMethod: self.requestMethod];
+    [request setValue:@"application/json" forHTTPHeaderField: @"Accept"];
+    NSString *boundary = @"0xKhTmLbOuNdArY";
+    [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary] forHTTPHeaderField:@"Content-type"];
+ 
+    // [request setValue:@"http://localhost:3000/api/v1/sessions" forHTTPHeaderField:@"Referer"];
+    if (self.cookie != nil){
+        [request setAllHTTPHeaderFields:[NSHTTPCookie requestHeaderFieldsWithCookies: self.cookie]];
+    }
+    
+    [request setHTTPBody:fileData];
+    
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate: self];
+    if (connection){
+        receivedData = [NSMutableData data];
+    }else{
+        NSLog(@"%@", @"Connection failed");
+    }
+
+}
 - (void) handleReceivedData: (NSMutableData*) data{
     [delegate requestCallback: data];
+}
+
+- (void) handleConnectionError: (NSError*) error{
+    [delegate errorCallback: error];
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response{
@@ -75,6 +123,8 @@
 }
 
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    [self handleConnectionError:error];
+    
     NSString *errorMessage = [error localizedDescription];
     NSLog(@"Connection failed! - %@ - %@ ", errorMessage, [[error userInfo] objectForKey: NSURLErrorFailingURLErrorKey]);
 }

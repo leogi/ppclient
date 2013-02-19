@@ -11,20 +11,35 @@
 @implementation PPAppConstant
 
 #ifdef DEBUG
-NSString* LoginEndpoint = @"http://localhost:3000/api/v1/sessions";
-NSString* LogoutEndpoint = @"http://localhost:3000/api/v1/sessions";
+NSString* Hostname = @"http://192.168.1.38:3000/";
 
+//for sessions controller
+NSString* LoginEndpoint = @"api/v1/sessions";
+NSString* LogoutEndpoint = @"api/v1/sessions/0";
+
+const int PPLoginCallbackType = 1;
+const int PPLogoutCallbackType = 2;
+
+//for users controller
+NSString* UsersShowEndPoint = @"api/v1/users/";// +id
+NSString* UsersCreateEndPoint = @"api/v1/users/";
+NSString* UsersUpdateEndPoint = @"api/v1/users/";// +id
+NSString* UsersDestroyEndPoint = @"api/v1/users/";// +id
+
+const int PPUsersShowCallbackType = 3;
+const int PPUsersCreateCallbackType = 4;
+const int PPUsersUpdateCallbackType = 5;
+const int PPUsersDestroyCallbackType = 6;
+
+// method
 NSString* GET = @"GET";
 NSString* POST = @"POST";
 NSString* PUT = @"PUT";
 NSString* DELETE = @"DELETE";
 
-const int PPLoginCallbackType = 1;
-const int PPLogoutCallbackType = 2;
-
 #else
-NSString* LoginEndpoint = @"http://localhost:3000/api/v1/sessions";
-NSString* LogoutEndpoint = @"http://localhost:3000/api/v1/sessions";
+NSString* LoginEndpoint = @"http://192.168.1.38:3000/api/v1/sessions";
+NSString* LogoutEndpoint = @"http://192.168.1.38:3000/api/v1/sessions";
 #endif
 
 @end

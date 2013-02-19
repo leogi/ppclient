@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B06CF1C16D318A200A10098 /* PPApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06CF1B16D318A200A10098 /* PPApplicationController.m */; };
+		0B06CF1F16D329BD00A10098 /* PPUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06CF1E16D329BD00A10098 /* PPUsers.m */; };
 		86429F7416D205EA007BE20E /* PPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 86429F7316D205EA007BE20E /* PPApplication.m */; };
 		86429F7C16D22D5E007BE20E /* PPAppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 86429F7B16D22D5E007BE20E /* PPAppConstant.m */; };
 		865B795416CF1DF20001B650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865B795316CF1DF20001B650 /* UIKit.framework */; };
@@ -40,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B06CF1A16D318A200A10098 /* PPApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPApplicationController.h; sourceTree = "<group>"; };
+		0B06CF1B16D318A200A10098 /* PPApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPApplicationController.m; sourceTree = "<group>"; };
+		0B06CF1D16D329BD00A10098 /* PPUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUsers.h; sourceTree = "<group>"; };
+		0B06CF1E16D329BD00A10098 /* PPUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUsers.m; sourceTree = "<group>"; };
 		86429F7216D205EA007BE20E /* PPApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPApplication.h; sourceTree = "<group>"; };
 		86429F7316D205EA007BE20E /* PPApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPApplication.m; sourceTree = "<group>"; };
 		86429F7816D20E5C007BE20E /* PPViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 				865B796E16CF1DF20001B650 /* PPViewController.h */,
 				865B796F16CF1DF20001B650 /* PPViewController.m */,
 				865B795A16CF1DF20001B650 /* Supporting Files */,
+				0B06CF1A16D318A200A10098 /* PPApplicationController.h */,
+				0B06CF1B16D318A200A10098 /* PPApplicationController.m */,
 			);
 			path = PPClient;
 			sourceTree = "<group>";
@@ -204,6 +212,8 @@
 				86429F7816D20E5C007BE20E /* PPViewDelegate.h */,
 				86429F7A16D22D5E007BE20E /* PPAppConstant.h */,
 				86429F7B16D22D5E007BE20E /* PPAppConstant.m */,
+				0B06CF1D16D329BD00A10098 /* PPUsers.h */,
+				0B06CF1E16D329BD00A10098 /* PPUsers.m */,
 			);
 			name = PPController;
 			sourceTree = "<group>";
@@ -326,6 +336,8 @@
 				865B79A516CF1FD20001B650 /* PPLogin.m in Sources */,
 				86429F7416D205EA007BE20E /* PPApplication.m in Sources */,
 				86429F7C16D22D5E007BE20E /* PPAppConstant.m in Sources */,
+				0B06CF1C16D318A200A10098 /* PPApplicationController.m in Sources */,
+				0B06CF1F16D329BD00A10098 /* PPUsers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

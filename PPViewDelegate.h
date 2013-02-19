@@ -10,7 +10,12 @@
 
 @protocol PPViewDelegate <NSObject>
 
+// for sessions
 - (void) ppLoginCallback: (NSMutableData*) data;
 - (void) ppLogoutCallback: (NSMutableData*) data;
 
+// for users
+- (void) ppUserUpdateCallback: (NSMutableData*) data;
+
+- (void) ppConnectionErrorCallback: (NSError*) error;
 @end

@@ -28,9 +28,14 @@
         [delegate ppLoginCallback:receivedData];
     }else if (typeCallback == PPLogoutCallbackType){
         [delegate ppLogoutCallback:receivedData];
-    }else {
-        //NSLog(@"dech chay");
+    }else if (typeCallback == PPUsersUpdateCallbackType){
+        [delegate ppUserUpdateCallback:receivedData];
     }
+}
+
+- (void)errorCallback:(NSError *)error{
+    [delegate ppConnectionErrorCallback: error];
+    NSLog(@"%@", @"error callback success");
 }
 
 @end
