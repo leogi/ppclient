@@ -10,9 +10,6 @@
 
 @implementation PPAppConstant
 
-#ifdef DEBUG
-NSString* Hostname = @"http://192.168.1.38:3000/";
-
 //for sessions controller
 NSString* LoginEndpoint = @"api/v1/sessions";
 NSString* LogoutEndpoint = @"api/v1/sessions/0";
@@ -37,6 +34,8 @@ NSString* POST = @"POST";
 NSString* PUT = @"PUT";
 NSString* DELETE = @"DELETE";
 
+#ifdef DEBUG
+NSString* Hostname = @"http://192.168.1.38:3000/";
 #else
 NSString* LoginEndpoint = @"http://192.168.1.38:3000/api/v1/sessions";
 NSString* LogoutEndpoint = @"http://192.168.1.38:3000/api/v1/sessions";

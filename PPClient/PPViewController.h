@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PPLogin.h"
+#import "PPSessions.h"
 #import "PPApplicationController.h"
 #import "PPUsers.h"
 
@@ -17,6 +17,7 @@
 - (IBAction)button:(id)sender;
 - (IBAction)logout:(id)sender;
 - (IBAction)update:(id)sender;
+- (IBAction)destroy:(id)sender;
 
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *password;

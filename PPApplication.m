@@ -30,7 +30,10 @@
         [delegate ppLogoutCallback:receivedData];
     }else if (typeCallback == PPUsersUpdateCallbackType){
         [delegate ppUserUpdateCallback:receivedData];
+    }else if (typeCallback == PPUsersDestroyCallbackType){
+        [delegate ppUserUpdateCallback:receivedData];
     }
+    
 }
 
 - (void)errorCallback:(NSError *)error{

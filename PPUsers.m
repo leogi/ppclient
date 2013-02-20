@@ -21,26 +21,21 @@
 }
 
 - (void)update{
-    NSString *boundary = @"0xKhTmLbOuNdArY";
-    
-    NSMutableData *body = [NSMutableData data];
-	[body appendData:[[NSString stringWithFormat:@"--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"thefilename\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[NSData dataWithData:avatarData]];
-    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"Content-Disposition: form-data; name=\"user[nickname]\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"paramstringvalue1" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"Content-Disposition: form-data; name=\"user[email]\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"paramstringvalue2" dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[[NSString stringWithFormat:@"r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+ 
+    PPHttpRequestDataParam* requestdata = [[PPHttpRequestDataParam alloc] initForDataParams];
+    [requestdata appendParams:@"user[avatar]" forFilename:@"test.jpg" forDataValue: avatarData];
+    [requestdata appendParams:@"user[nickname]" forStringValue: @"dainghiavotinh"];
+    [requestdata appendParams:@"user[email]" forStringValue:@"nghialv.bk@gmail.com"];
     
     NSString* url = [NSString stringWithFormat:@"%@%@%@", Hostname, UsersUpdateEndPoint,@"1"];
-    PPHttpRequest* request = [[PPHttpRequest alloc] initWithDelegateForUpload:self forEndPoint: url forMethod: PUT forRequestData: body];
+    PPHttpRequest* request = [[PPHttpRequest alloc] initWithDelegateForUpload:self forEndPoint: url forMethod: PUT forRequestData: [requestdata toParams]];
     
-    [request connectForUpload];
+    [request connectForDataParams];
     
 }
-
+- (void)destroy{
+    NSString* url = [NSString stringWithFormat:@"%@%@%@", Hostname, UsersDestroyEndPoint, @"1"];
+    PPHttpRequest* request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint:url forMethod:DELETE forRequestData: [[NSMutableString alloc] init]];
+    [request connectForStringParams];
+}
 @end

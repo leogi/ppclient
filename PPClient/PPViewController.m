@@ -23,12 +23,12 @@
     _email = _emailTextfield.text;
     _password = _passwordTextfield.text;
     
-    PPLogin* pplogin = [[PPLogin alloc] initWithDelegate:self forTypeCallback: PPLoginCallbackType];
+    PPSessions* pplogin = [[PPSessions alloc] initWithDelegate:self forTypeCallback: PPLoginCallbackType];
     [pplogin login: _email : _password];
 }
 
 - (IBAction)logout:(id)sender {
-    PPLogin* pplogin = [[PPLogin alloc] initWithDelegate:self forTypeCallback: PPLoginCallbackType];
+    PPSessions* pplogin = [[PPSessions alloc] initWithDelegate:self forTypeCallback: PPLoginCallbackType];
     [pplogin logout];
 }
 
@@ -38,6 +38,11 @@
     [users setAvatarUrl:remoteUrl];
     [users setUid:@"1"];
     [users update];
+}
+
+- (IBAction)destroy:(id)sender {
+    PPUsers* users = [[PPUsers alloc] initWithDelegate:self forTypeCallback:PPUsersDestroyCallbackType];
+    [users destroy];
 }
 
 - (void)ppLoginCallback:(NSMutableData *)data{
@@ -50,5 +55,9 @@
 
 - (void) ppUserUpdateCallback: (NSMutableData*) data{
     NSLog(@"pp user update callback success");
+}
+
+- (void) ppUserDestroyCallback: (NSMutableData*) data{
+    NSLog(@"pp user destroy callback success");
 }
 @end

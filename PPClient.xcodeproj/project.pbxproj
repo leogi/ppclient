@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B06CF1C16D318A200A10098 /* PPApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06CF1B16D318A200A10098 /* PPApplicationController.m */; };
 		0B06CF1F16D329BD00A10098 /* PPUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06CF1E16D329BD00A10098 /* PPUsers.m */; };
+		0BB85D0216D4AFE600BD99A9 /* PPHttpRequestDataParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB85D0116D4AFE600BD99A9 /* PPHttpRequestDataParam.m */; };
+		0BEEC02716D476D600D44039 /* PPHttpRequestStringParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEC02616D476D500D44039 /* PPHttpRequestStringParam.m */; };
 		86429F7416D205EA007BE20E /* PPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 86429F7316D205EA007BE20E /* PPApplication.m */; };
 		86429F7C16D22D5E007BE20E /* PPAppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 86429F7B16D22D5E007BE20E /* PPAppConstant.m */; };
 		865B795416CF1DF20001B650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865B795316CF1DF20001B650 /* UIKit.framework */; };
@@ -28,7 +30,7 @@
 		865B798216CF1DF20001B650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 865B798016CF1DF20001B650 /* InfoPlist.strings */; };
 		865B798516CF1DF20001B650 /* PPClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865B798416CF1DF20001B650 /* PPClientTests.m */; };
 		865B799F16CF1FB00001B650 /* PPHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 865B799E16CF1FB00001B650 /* PPHttpRequest.m */; };
-		865B79A516CF1FD20001B650 /* PPLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 865B79A416CF1FD20001B650 /* PPLogin.m */; };
+		865B79A516CF1FD20001B650 /* PPSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 865B79A416CF1FD20001B650 /* PPSessions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		0B06CF1B16D318A200A10098 /* PPApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPApplicationController.m; sourceTree = "<group>"; };
 		0B06CF1D16D329BD00A10098 /* PPUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUsers.h; sourceTree = "<group>"; };
 		0B06CF1E16D329BD00A10098 /* PPUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUsers.m; sourceTree = "<group>"; };
+		0BB85D0016D4AFE600BD99A9 /* PPHttpRequestDataParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPHttpRequestDataParam.h; sourceTree = "<group>"; };
+		0BB85D0116D4AFE600BD99A9 /* PPHttpRequestDataParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPHttpRequestDataParam.m; sourceTree = "<group>"; };
+		0BEEC02516D476D500D44039 /* PPHttpRequestStringParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPHttpRequestStringParam.h; sourceTree = "<group>"; };
+		0BEEC02616D476D500D44039 /* PPHttpRequestStringParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPHttpRequestStringParam.m; sourceTree = "<group>"; };
 		86429F7216D205EA007BE20E /* PPApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPApplication.h; sourceTree = "<group>"; };
 		86429F7316D205EA007BE20E /* PPApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPApplication.m; sourceTree = "<group>"; };
 		86429F7816D20E5C007BE20E /* PPViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewDelegate.h; sourceTree = "<group>"; };
@@ -76,8 +82,8 @@
 		865B798416CF1DF20001B650 /* PPClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPClientTests.m; sourceTree = "<group>"; };
 		865B799D16CF1FB00001B650 /* PPHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPHttpRequest.h; sourceTree = "<group>"; };
 		865B799E16CF1FB00001B650 /* PPHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPHttpRequest.m; sourceTree = "<group>"; };
-		865B79A316CF1FD20001B650 /* PPLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLogin.h; sourceTree = "<group>"; };
-		865B79A416CF1FD20001B650 /* PPLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLogin.m; sourceTree = "<group>"; };
+		865B79A316CF1FD20001B650 /* PPSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSessions.h; sourceTree = "<group>"; };
+		865B79A416CF1FD20001B650 /* PPSessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSessions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,10 @@
 				865B799D16CF1FB00001B650 /* PPHttpRequest.h */,
 				865B799E16CF1FB00001B650 /* PPHttpRequest.m */,
 				86429F7916D20EE5007BE20E /* PPRequestDelegate.h */,
+				0BEEC02516D476D500D44039 /* PPHttpRequestStringParam.h */,
+				0BEEC02616D476D500D44039 /* PPHttpRequestStringParam.m */,
+				0BB85D0016D4AFE600BD99A9 /* PPHttpRequestDataParam.h */,
+				0BB85D0116D4AFE600BD99A9 /* PPHttpRequestDataParam.m */,
 			);
 			name = PPHttpRequest;
 			sourceTree = "<group>";
@@ -205,8 +215,8 @@
 		865B799916CF1F520001B650 /* PPController */ = {
 			isa = PBXGroup;
 			children = (
-				865B79A316CF1FD20001B650 /* PPLogin.h */,
-				865B79A416CF1FD20001B650 /* PPLogin.m */,
+				865B79A316CF1FD20001B650 /* PPSessions.h */,
+				865B79A416CF1FD20001B650 /* PPSessions.m */,
 				86429F7216D205EA007BE20E /* PPApplication.h */,
 				86429F7316D205EA007BE20E /* PPApplication.m */,
 				86429F7816D20E5C007BE20E /* PPViewDelegate.h */,
@@ -333,11 +343,13 @@
 				865B796416CF1DF20001B650 /* PPAppDelegate.m in Sources */,
 				865B797016CF1DF20001B650 /* PPViewController.m in Sources */,
 				865B799F16CF1FB00001B650 /* PPHttpRequest.m in Sources */,
-				865B79A516CF1FD20001B650 /* PPLogin.m in Sources */,
+				865B79A516CF1FD20001B650 /* PPSessions.m in Sources */,
 				86429F7416D205EA007BE20E /* PPApplication.m in Sources */,
 				86429F7C16D22D5E007BE20E /* PPAppConstant.m in Sources */,
 				0B06CF1C16D318A200A10098 /* PPApplicationController.m in Sources */,
 				0B06CF1F16D329BD00A10098 /* PPUsers.m in Sources */,
+				0BEEC02716D476D600D44039 /* PPHttpRequestStringParam.m in Sources */,
+				0BB85D0216D4AFE600BD99A9 /* PPHttpRequestDataParam.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +461,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PPClient/PPClient-Prefix.pch";
 				INFOPLIST_FILE = "PPClient/PPClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +473,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PPClient/PPClient-Prefix.pch";
 				INFOPLIST_FILE = "PPClient/PPClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

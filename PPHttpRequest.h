@@ -25,7 +25,7 @@
 
 - (void) handleReceivedData: (NSMutableData*) data;
 - (void) handleConnectionError: (NSError*) error;
-- (void) connect;
-- (void) connectForUpload;
+- (void) connectForStringParams;
+- (void) connectForDataParams;
 
 @end

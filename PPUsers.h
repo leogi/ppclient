@@ -17,6 +17,7 @@
 
 - (void) setAvatarUrl:(NSURL *)avatarUrl;
 - (void) update;
+- (void) destroy;
 
 @end
 

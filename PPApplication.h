@@ -11,6 +11,8 @@
 #import "PPViewDelegate.h"
 #import "PPRequestDelegate.h"
 #import "PPAppConstant.h"
+#import "PPHttpRequestStringParam.h"
+#import "PPHttpRequestDataParam.h"
 
 @interface PPApplication : NSObject <PPRequestDelegate>
 

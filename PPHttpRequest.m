@@ -52,7 +52,7 @@
     }
 }
 
-- (void)connect{
+- (void)connectForStringParams{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString: endpoint]];
     [request setHTTPMethod: self.requestMethod];
     [request setValue:@"application/json" forHTTPHeaderField: @"Accept"];
@@ -81,7 +81,7 @@
     }
 }
 
-- (void)connectForUpload{
+- (void)connectForDataParams{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString: endpoint]];
     [request setHTTPMethod: self.requestMethod];
     [request setValue:@"application/json" forHTTPHeaderField: @"Accept"];

@@ -6,30 +6,29 @@
 //  Copyright (c) 2013年 Nghia Le Van. All rights reserved.
 //
 
-#import "PPLogin.h"
+#import "PPSessions.h"
 #import "PPAppConstant.h"
 
-@implementation PPLogin
+@implementation PPSessions
 
 
 - (void)login:(NSString *)email :(NSString *)password{
     NSLog(@"%@ - %@", email, password);
-    NSMutableString* data = [[NSMutableString alloc] init];
-    [data appendString:@"session[email]="];
-    [data appendString:email];
-    [data appendString:@"&session[password]="];
-    [data appendString:password];
+    
+    PPHttpRequestStringParam* requestdata = [[PPHttpRequestStringParam alloc] initForStringParams];
+    [requestdata appendParams:@"session[email]" : email];
+    [requestdata appendParams:@"session[password]" : password];
     
     NSString* url = [NSString stringWithFormat:@"%@%@", Hostname, LoginEndpoint];
-    PPHttpRequest *request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint: url forMethod:POST forRequestData:data];
-    [request connect]; // run
+    PPHttpRequest *request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint: url forMethod:POST forRequestData: [requestdata toParams]];
+    [request connectForStringParams]; // run
 }
 
 - (void)logout{
     NSMutableString* data = [[NSMutableString alloc] init];
     NSString* url = [NSString stringWithFormat:@"%@%@", Hostname, LogoutEndpoint];
     PPHttpRequest *request = [[PPHttpRequest alloc] initWithDelegate:self forEndPoint: url forMethod:DELETE forRequestData:data];
-    [request connect]; // run
+    [request connectForStringParams]; // run
 }
 
 @end

@@ -16,6 +16,7 @@
 
 // for users
 - (void) ppUserUpdateCallback: (NSMutableData*) data;
+- (void) ppUserDestroyCallback: (NSMutableData*) data;
 
 - (void) ppConnectionErrorCallback: (NSError*) error;
 @end

@@ -10,7 +10,7 @@
 #import "PPHttpRequest.h"
 #import "PPApplication.h"
 
-@interface PPLogin : PPApplication
+@interface PPSessions : PPApplication
 
 - (void) login: (NSString*) email : (NSString*) password;
 - (void) logout;
